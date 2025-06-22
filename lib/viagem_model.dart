@@ -1,8 +1,9 @@
+import 'dart:convert';
 import 'package:latlong2/latlong.dart';
 
 class Viagem {
   final LatLng coordenadas;
-  final String nome;
+  String nome; // Alterado para não ser final
   final String endereco;
   final String cidade;
   final String estado;
@@ -23,7 +24,39 @@ class Viagem {
     this.referencia,
   });
 
-  factory Viagem.fromJson(Map<String, dynamic> json,
+  // NOVO: Método para converter a instância da classe para um Map (para JSON)
+  Map<String, dynamic> toJson() {
+    return {
+      'latitude': coordenadas.latitude,
+      'longitude': coordenadas.longitude,
+      'nome': nome,
+      'endereco': endereco,
+      'cidade': cidade,
+      'estado': estado,
+      'pais': pais,
+      'cep': cep,
+      'bairro': bairro,
+      'referencia': referencia,
+    };
+  }
+
+  // NOVO: Método factory para criar uma instância a partir de um Map (de JSON)
+  factory Viagem.fromStorageJson(Map<String, dynamic> json) {
+    return Viagem(
+      coordenadas: LatLng(json['latitude'], json['longitude']),
+      nome: json['nome'],
+      endereco: json['endereco'],
+      cidade: json['cidade'],
+      estado: json['estado'],
+      pais: json['pais'],
+      cep: json['cep'],
+      bairro: json['bairro'],
+      referencia: json['referencia'],
+    );
+  }
+
+  // ATUALIZADO: O construtor a partir da API Nominatim permanece
+  factory Viagem.fromApiJson(Map<String, dynamic> json,
       {required String nomePersonalizado}) {
     final endereco = json['address'];
     return Viagem(
