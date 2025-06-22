@@ -18,12 +18,13 @@ Um aplicativo móvel e web, desenvolvido em Flutter, que permite aos utilizadore
 
 Veja a aplicação em ação:
 
--   **[Aceder à Versão Web da Aplicação](https://SEU_LINK_DO_FIREBASE_AQUI)**
--   **[Assistir ao Vídeo de Demonstração](https://SEU_LINK_DO_VIDEO_AQUI)**
-
-*(Adicione aqui um GIF ou screenshots da sua aplicação em funcionamento)*
+-   **[Versão Web da Aplicação](https://preview.flutlab.io/felipe_battarra/minhas-viagens-copy/)**
 
 ---
+**Vídeo de Demonstração
+
+https://github.com/user-attachments/assets/f9ab33de-0b75-44db-afd6-40d1757aa185
+
 
 ## 🛠️ Tecnologias e Pacotes
 
@@ -73,5 +74,5 @@ Siga os passos abaixo para executar a aplicação no seu ambiente de desenvolvim
 
 Desenvolvido por **Slipher**.
 
--   [GitHub](https://github.com/SEU_USUARIO)
--   [LinkedIn](https://linkedin.com/in/SEU_USUARIO)
+-   [GitHub](https://github.com/FelipeBattarra)
+-   [LinkedIn](https://linkedin.com/in/FelipeJorgeBattarra)
